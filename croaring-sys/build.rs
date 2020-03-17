@@ -7,7 +7,6 @@ use std::path::PathBuf;
 fn main() {
     cc::Build::new()
         .flag_if_supported("-std=c11")
-        .flag_if_supported("-march=native")
         .flag_if_supported("-O3")
         .define("DISABLEAVX", Some("1"))
         .file("CRoaring/roaring.c")
